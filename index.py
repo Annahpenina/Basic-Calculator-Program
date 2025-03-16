@@ -1,15 +1,18 @@
-x = input("Enter x value:")
-y = input("Enter y value:")
+operator = input("Enter an operator (+, -, *, /): ")
+num1 = float(input("Enter first number:"))
+num2 = float(input("Enter second number:"))
 
-x = int(x)
-y = int(y)
-
-print(f"{x} + {y} = {x+y}")
-
-print(f"{x} - {y} = {x-y}")
-
-print(f"{x} * {y} = {x*y}")
-
-print(f"{x} / {y} = {x/y}")
-
-
+if operator == "+":
+    result = num1 + num2
+    print(f" {num1} + {num2} = {result}")
+elif operator == "-":
+    result = num1 - num2
+    print(f" {num1} - {num2} = {round(result, 2)}")
+elif operator == "*":
+    result = num1 * num2
+    print(f" {num1} * {num2} = {round(result, 2)}")
+elif operator == "/":
+    result = num1 / num2
+    print(f" {num1} / {num2} = {round(result, 2)}")
+else:
+    print("Invalid operation. Please enter +, -, *, or /.")
